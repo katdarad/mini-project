@@ -1,0 +1,48 @@
+<div>
+
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark cyan" [containerInside]="false">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand><a class="navbar-brand" href="#">Movies app</a></mdb-navbar-brand>
+  
+    <!-- Collapsible content -->
+    <links>
+  
+      <!-- Links -->
+      <ul class="navbar-nav ml-auto">
+       
+       
+        <header>
+            <div class="container mt-2">
+              <ul>
+                <li><a routerLink="/"  class="text-white">home</a></li>
+                <li><a routerLink="movies"  class="text-white">movies</a></li>
+              </ul>
+          
+            </div>
+          </header>
+
+
+
+  
+        <!-- Dropdown -->
+        <li class="nav-item dropdown" dropdown>
+          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+            <mdb-icon fas icon="user"></mdb-icon> Profile<span class="caret"></span></a>
+          <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#">whatever</a>
+            <a class="dropdown-item waves-light" mdbWavesEffect href="#">whatever</a>
+          </div>
+        </li>
+  
+      </ul>
+      <!-- Links -->
+    </links>
+    <!-- Collapsible content -->
+  
+  </mdb-navbar>
+
+</div>
+
+<router-outlet></router-outlet>
