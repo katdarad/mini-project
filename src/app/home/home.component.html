@@ -5,7 +5,7 @@
       <div class="form-inline waves-light" class= "#wrapper">
         <div class="md-form mt-0">
           <input class="form-control" [(ngModel)]= "inputText" type="text" style="text-align-last: center;" placeholder="Search Movie">
-          {{inputText}}
+
           <div class="button">
             <button  click="search" class="" type="button" mdbBtn color="dark" mdbWavesEffect>Search</button>
           </div>
@@ -14,8 +14,15 @@
       </div>
     </div>
   
-    
+    <!--Displaying movies data-->
+<ul *ngFor = "let data of httpdata">
 
+  <li>
+    Movies: {{data.Poster}}
+    Title: {{data.Title}}
+  </li>
+
+</ul>
 
     
 

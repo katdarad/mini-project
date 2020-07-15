@@ -9,13 +9,16 @@ import { HttpClient} from '@angular/common/http'
 })
 export class GetMovieService {
 
-url="http://www.omdbapi.com/?i=tt3896198&apikey=362408ae";
+url="http://www.omdbapi.com/?s=super&apikey=362408ae";
 
   constructor(private http: HttpClient) {
    
    }
 
 getMovie(){
+  return this.http.get(this.url);
+}
+display_data(){
   return this.http.get(this.url);
 }
 

@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class HomeComponent implements OnInit {
 
+httpdata;
 
   constructor(private GetMovieService: GetMovieService) { }
 
@@ -23,13 +24,15 @@ getMovie(){
   this.GetMovieService.getMovie().subscribe(data=>{data=data;
     console.log(data);
     })
-};
+}
 
-search(){
-  this
+display_data(data){
+  this.httpdata = data;
 }
 
   
+
+
 }
  
 
